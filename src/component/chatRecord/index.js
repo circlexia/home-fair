@@ -27,6 +27,7 @@ export class ChatRecord extends PureComponent {
           {
             data.map((item,index)=>{
               return <Item
+                key={index}
                 arrow="horizontal"
                 thumb={Portrait}
                 multipleLine
