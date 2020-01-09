@@ -3,11 +3,9 @@ import ReactDOM from 'react-dom';
 // import { Router, Route, Switch } from "react-router";
 import {HashRouter,Route,Switch} from 'react-router-dom';
 import {Home} from './container';
-import './index.css';
-// import App from './App';
+import 'antd-mobile/dist/antd-mobile.css';
+// import './index.css';
 import * as serviceWorker from './serviceWorker';
-
-// ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render( <HashRouter>
   <Switch>
       <Route exact path="/" component={Home}/>
