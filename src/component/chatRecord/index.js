@@ -5,14 +5,14 @@ import Portrait from '../../assets/img/portrait.png';
 const Item = List.Item;
 const Brief = Item.Brief;
 const data = [{
-  title:'标题一',
-  subtitle:'副标题一'
+  title:'张先生',
+  subtitle:'【未读】今天没来得及吃饭'
 },{
-  title:'标题二',
-  subtitle:'副标题二'
+  title:'王先生',
+  subtitle:'【已读】非常感谢您的推荐'
 },{
-  title:'标题三',
-  subtitle:'副标题三'
+  title:'李先生',
+  subtitle:'【未读】欢迎下次再来'
 }]
 export class ChatRecord extends PureComponent {
   // constructor(props) {
