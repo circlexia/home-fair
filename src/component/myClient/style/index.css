@@ -1,3 +1,57 @@
 ul li{
   list-style: none;
 }
+.myclient-title{
+  font-size: 12px;
+  text-align: left;
+  background: #eee;
+  padding-left: 12px;
+  height: 1rem;
+  line-height: 1rem;
+}
+.myclient-container{
+  width: 100%;
+  background: #eee;
+}
+.myclient-container ul {
+  padding-left: 0px;
+}
+.myclient-container ul li{
+  padding-left: 0;
+}
+.myclient-content{
+  padding-left: 0;
+}
+.myclient-content li{
+  height: 4rem;
+  line-height: 4rem;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding-left: 12px!important;
+}
+.myclient-content li div{
+  height: 4rem;
+  line-height: 4rem;
+}
+.myclient-avatar{
+  display: inline-block;
+  float: left;
+  height: 4rem;
+  line-height: 4rem;
+}
+.myclient-avatar img{
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 10px;
+  top: .6rem;
+  position: relative;
+  margin-right: 12px;
+}
+.myclient-content .name{
+  height: 4rem;
+  line-height: 4rem;
+  display: inline-block;
+  float: left;
+}

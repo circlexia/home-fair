@@ -17,7 +17,7 @@ class Home extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      initialPage: 0
+      initialPage: 1
     }
   }
     componentDidMount(){
@@ -31,20 +31,21 @@ class Home extends PureComponent {
   
 
   render() {
+    const {initialPage} = this.state;
     return (
       <div>
         <Navbar />
         <SearchBar placeholder="Search" maxLength={8} />
          <Tabs tabs={tabs}
-          initialPage={0}
+          initialPage={initialPage}
           onChange={(tab, index) => { console.log('onChange', index, tab); }}
           onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
           tabBarUnderlineStyle={tabBarUnderlineStyle3}
         >
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff' }}>
+          <div style={{ display: 'flex' }}>
             <ChatRecord />
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff' }}>
+          <div style={{ display: 'flex' }}>
             <MyClient />
           </div>
         </Tabs>

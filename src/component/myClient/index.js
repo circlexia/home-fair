@@ -69,23 +69,31 @@ export class MyClient extends PureComponent {
   render() {
     const data1 = this._normalizeUser(data);
     return (
-      <div>
+      <div className="myclient-container">
         <ul>
           {
             data1.map((item,index)=>{
-              console.log(item);
-              return <li>
-                <h2>{item.title}</h2>
-                <ul>
+              return <div>
+                <h2 className="myclient-title">{item.title}</h2>
+                <li key={index}>
+                <ul className="myclient-content">
                   {
                     item.items.map((item1,index1)=>{
-                      return <li key={index1}>
-                        <span className="name">{item1.name}</span>
+                      return <li key={index1} className="">
+                        <div>
+                          <span className="myclient-avatar">
+                            <img src={item1.avatar} alt="avatar"/>
+                          </span>
+                          <span className="name">{item1.name}</span>
+                   
+                        </div>
+                        
                       </li>
                     })
                   }
                 </ul>
               </li>
+              </div>
             })
           }
         </ul>
