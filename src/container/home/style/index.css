@@ -1,0 +1,14 @@
+.home-fair-content{
+  padding-top: 40px;
+}
+.am-search{
+  position: fixed!important;
+  width: 100%;
+  top: 40px;
+  z-index: 9;
+}
+.home-fair-tab{
+  height: 100vh;
+  top: 44px;
+  position: relative;
+}

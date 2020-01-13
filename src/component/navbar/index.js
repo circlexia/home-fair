@@ -23,7 +23,7 @@ export class Navbar extends React.Component {
       <div className="upcore-navbar">
         <span className="upcore-navbar-icon-left" onClick={() => this.onLeftClick()}/>
         <div className="upcore-navbar-name-span" style={{padding: '0',backgroundColor:'#ffffff'}}>
-          我是营养师
+          {this.props.title}
         </div>
       </div>
     );

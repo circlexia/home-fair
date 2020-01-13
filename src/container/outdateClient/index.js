@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 // import {List} from 'antd-mobile';
+import {Navbar} from '../../component/navbar';
 import './style/index.css';
 import data from '../../common/data';
 import Singer from '../../common/user';
@@ -7,7 +8,7 @@ const HOT_SINGER_LEN = 0;
 const HOT_NAME = '热门';
 // const Item = List.Item;
 // const Brief = Item.Brief;
-export class MyClient extends PureComponent {
+class OutdateClient extends PureComponent {
   constructor(props) {
     super(props)
 
@@ -84,6 +85,7 @@ export class MyClient extends PureComponent {
     const data1 = this._normalizeUser(data);
     return (
       <div className="myclient-container">
+        <Navbar title="过期客户"/>
         <div>
         <ul>
           {
@@ -116,24 +118,10 @@ export class MyClient extends PureComponent {
               </div>
             })
           }
-          <p className="count-number">10位联系人</p>
-          <p className="count-number" onClick={()=>this.handleOutdate()}>查看过期客户</p>
         </ul>
-        </div>
-        <div className="myclient-shortcut">
-          <ul>
-            {
-              data1.map((item,index)=>{
-                return (
-                  <li key={index} className="shortcut-list">
-                    {item.title}
-                  </li>
-                )
-              })
-            }
-          </ul>
         </div>
       </div>
     );
   }
 }
+export default OutdateClient;

@@ -3,6 +3,7 @@ import {Tabs,Badge,SearchBar} from 'antd-mobile';
 import {Navbar} from '../../component/navbar';
 import {ChatRecord} from '../../component/chatRecord';
 import {MyClient} from '../../component/myClient';
+import './style/index.css';
 const tabBarUnderlineStyle3 = {
   'color': '#2283E2',
   'height': '2px',
@@ -33,22 +34,27 @@ class Home extends PureComponent {
   render() {
     const {initialPage} = this.state;
     return (
-      <div>
-        <Navbar />
+      <div className="home-fair-container">
+        <Navbar title="我是营养师"/>
+        <div className="home-fair-content">
         <SearchBar placeholder="Search" maxLength={8} />
-         <Tabs tabs={tabs}
-          initialPage={initialPage}
-          onChange={(tab, index) => { console.log('onChange', index, tab); }}
-          onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
-          tabBarUnderlineStyle={tabBarUnderlineStyle3}
-        >
-          <div style={{ display: 'flex' }}>
-            <ChatRecord />
+          <div className="home-fair-tab">
+          <Tabs tabs={tabs}
+            initialPage={initialPage}
+            swipeable={false}
+            onChange={(tab, index) => { console.log('onChange', index, tab); }}
+            onTabClick={(tab, index) => { console.log('onTabClick', index, tab); }}
+            tabBarUnderlineStyle={tabBarUnderlineStyle3}
+          >
+            <div style={{ display: 'flex' }}>
+              <ChatRecord />
+            </div>
+            <div style={{ display: 'flex',height: '100%' }}>
+              <MyClient history={this.props.history}/>
+            </div>
+          </Tabs>
           </div>
-          <div style={{ display: 'flex' }}>
-            <MyClient />
-          </div>
-        </Tabs>
+        </div>
       </div>
     )
   }

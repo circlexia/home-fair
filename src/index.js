@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import { Router, Route, Switch } from "react-router";
+// import LazyLoad from 'react-lazyload';
 import {HashRouter,Route,Switch} from 'react-router-dom';
-import {Home} from './container';
+import {Home,OutdateClient} from './container';
 import 'antd-mobile/dist/antd-mobile.css';
-// import './index.css';
 import * as serviceWorker from './serviceWorker';
 ReactDOM.render( <HashRouter>
   <Switch>
       <Route exact path="/" component={Home}/>
-      {/* <Route exact path="/detail" component={Detail}/> */}
+      <Route exact path="/outdate" component={OutdateClient}/>
   </Switch>
 </HashRouter>,document.getElementById('root'));
 
