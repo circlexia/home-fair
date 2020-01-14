@@ -12,7 +12,7 @@ ul li{
 }
 .myclient-container{
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   background: #eee;
   position: relative;
   /* overflow: hidden; */
@@ -48,7 +48,7 @@ ul li{
   display: inline-block;
   width: 2.8rem;
   height: 2.8rem;
-  border-radius: 10px;
+  border-radius: 50%;
   top: .6rem;
   position: relative;
   margin-right: 12px;
@@ -87,18 +87,31 @@ ul li{
   text-align: center;
   color: #999;
 }
-.myclient-shortcut{
-  position: absolute;
-  z-index: 30;
-  right: 0;
-  top: 40%;
-  transform: translateY(-50%);
-  width: 20px;
-  padding: 20px 0;
-  border-radius: 10px;
+.count-number-outdate{
+  color: #2283E2;
   text-align: center;
-  font-family: Helvetica;
+}
+.myclient-shortcut{
+  position: fixed;
+  width: 200px;
+  height: 300px;
+  top: 25%;
+  right: 10px;
+}
+.myclient-shortcut ul{
+  padding: 0;
+  left: 96%;
+  position: relative;
 }
 .myclient-shortcut .shortcut-list{
   padding-bottom: 6px;
+  color: #999;
+}
+.myclient-right-taocan{
+  color: #999;
+  display: inline-block;
+}
+.myclient-right-left{
+  width: 70px;
+  display: inline-block;
 }

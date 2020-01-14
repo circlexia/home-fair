@@ -1,12 +1,9 @@
 import React, { PureComponent } from 'react';
-// import {List} from 'antd-mobile';
 import './style/index.css';
 import data from '../../common/data';
 import Singer from '../../common/user';
 const HOT_SINGER_LEN = 0;
 const HOT_NAME = '热门';
-// const Item = List.Item;
-// const Brief = Item.Brief;
 export class MyClient extends PureComponent {
   constructor(props) {
     super(props)
@@ -23,9 +20,6 @@ export class MyClient extends PureComponent {
     this.setState({
       users: userData
     });
-    // this.setState({
-    //   users: data
-    // })
   }
   _normalizeUser(list) {
     let map = {
@@ -104,7 +98,7 @@ export class MyClient extends PureComponent {
                             </span>
                           </div>
                           <div className="myclient-right">
-                            <div className="myclient-right-name">{item1.name}</div>
+                            <div className="myclient-right-name"><span className="myclient-right-left">{item1.name.substr(0,5)}</span><span className="myclient-right-taocan">备孕期套餐(2020-03-28到期)</span></div>
                             <div className="myclient-right-note">备注：{item1.name}</div>
                           </div>
                         </div>
@@ -117,21 +111,8 @@ export class MyClient extends PureComponent {
             })
           }
           <p className="count-number">10位联系人</p>
-          <p className="count-number" onClick={()=>this.handleOutdate()}>查看过期客户</p>
+          <p className="count-number-outdate" onClick={()=>this.handleOutdate()}>查看已过期客户</p>
         </ul>
-        </div>
-        <div className="myclient-shortcut">
-          <ul>
-            {
-              data1.map((item,index)=>{
-                return (
-                  <li key={index} className="shortcut-list">
-                    {item.title}
-                  </li>
-                )
-              })
-            }
-          </ul>
         </div>
       </div>
     );
